@@ -1,6 +1,16 @@
 # 👩🏾‍⚕️ Sabine | Doctor, Builder, Advocate
 
-Hi! I'm Sabine — a general practitioner (GP) passionate about solving real healthcare problems with smart, ethical, and beautiful tech.
+Hi! I'm Sabine, a general practitioner (GP) passionate about solving real healthcare problems with smart, ethical, and beautiful tech.
+
+## 🧠 Who I Am
+I’m a general practitioner, researcher, and healthcare innovator building tools to:
+- Prevent medical-legal conflict (`Doctors in Court`)
+- Streamline care with AI and automation (`CareForAI`)
+- Empower international doctors & students with training platforms
+- Bridge tech and medicine with open-source projects
+
+I focus especially on immigrant doctors, women in medicine, and mental health in clinical practice.
+
 
 ### 💡 What I Build
 
@@ -12,6 +22,7 @@ Hi! I'm Sabine — a general practitioner (GP) passionate about solving real hea
 | Practice Automation | [Chrome Extensions for GPs](https://github.com/SUKIHEALTH/gp-tools)                     | Extensions to reduce admin and save time for healthcare teams.                                                |
 
 ### 🚀 Why It Matters
+Each tool is built with one goal in mind: **to protect doctors and improve patient care.**  
 
 I’m on a mission to:
 
