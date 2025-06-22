@@ -16,10 +16,10 @@ I focus especially on immigrant doctors, women in medicine, and mental health in
 
 | Theme               | Project                                                                                 | What It Does                                                                                                  |
 | ------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Legal Safety        | [Doctors in Court - RSS Summarizer](https://github.com/SUKIHEALTH/doctors-in-court-rss) | Scrapes new disciplinary court cases, summarizes them with AI, and helps doctors stay protected and informed. |
-| Patient Education   | [Patient Brochure Generator](https://github.com/SUKIHEALTH/patient-brochure)            | Turns medical websites into short, friendly brochures for patients, in seconds.                               |
-| Productivity        | [SOAP Plan Vault](https://github.com/SUKIHEALTH/soap-plan-vault)                        | Bilingual (EN/NL) AI-enhanced TextExpander template set for daily GP work.                                    |
-| Practice Automation | [Chrome Extensions for GPs](https://github.com/SUKIHEALTH/gp-tools)                     | Extensions to reduce admin and save time for healthcare teams.                                                |
+| Legal Safety        | [Doctors in Court - RSS Summarizer](https://github.com/SUKIHEALTH/court-summaries) | Scrapes new disciplinary court cases, summarizes them with AI, and helps doctors stay protected and informed. |
+| Patient Education   | [Patient Brochure Generator](https://github.com/SUKIHEALTH/thuisarts-summaries)            | Turns medical websites into short, friendly brochures for patients, in seconds.                               |
+| Productivity        | [SOAP Plan Vault](https://github.com/SUKIHEALTH/#)                        | Bilingual (EN/NL) AI-enhanced TextExpander template set for daily GP work.                                    |
+| Practice Automation | [Chrome Extensions for GPs](https://github.com/SUKIHEALTH/gp-ai-toolkit)                     | Extensions to reduce admin and save time for healthcare teams.                                                |
 
 ### 🚀 Why It Matters
 Each tool is built with one goal in mind: **to protect doctors and improve patient care.**  
