@@ -19,7 +19,8 @@ I focus especially on immigrant doctors, women in medicine, and mental health in
 | Legal Safety        | [Doctors in Court - RSS Summarizer](https://github.com/SUKIHEALTH/court-summaries) | Scrapes new disciplinary court cases, summarizes them with AI, and helps doctors stay protected and informed. |
 | Patient Education   | [Patient Brochure Generator](https://github.com/SUKIHEALTH/thuisarts-summaries)            | Turns medical websites into short, friendly brochures for patients, in seconds.                               |
 | Productivity        | [SOAP Plan Vault](https://github.com/SUKIHEALTH/#)                        | Bilingual (EN/NL) AI-enhanced TextExpander template set for daily GP work.                                    |
-| Practice Automation | [Chrome Extensions for GPs](https://github.com/SUKIHEALTH/gp-ai-toolkit)                     | Extensions to reduce admin and save time for healthcare teams.                                                |
+| Practice Automation | [Chrome Extensions for GPs](https://github.com/SUKIHEALTH/gp-ai-toolkit)                     | Extensions to reduce admin and save time for healthcare teams.    
+| Efficient patient note taking | [GP snippet ](https://github.com/SUKIHEALTH/gp-snippet)                     | AI-integrated app to create, save and run snippets or shortcuts to make patient note writing efficient and consistent. |
 
 ### 🚀 Why It Matters
 Each tool is built with one goal in mind: **to protect doctors and improve patient care.**  
