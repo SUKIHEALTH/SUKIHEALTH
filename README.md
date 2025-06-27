@@ -24,8 +24,6 @@ I focus especially on immigrant doctors, women in medicine, and mental health in
 | Fun clear anatomy visuals | [GP anatomy visuals ](https://github.com/SUKIHEALTH/retro-pop-art-anatomy)                     | Instead of opening Google Images during consultations, this tool built custom visual library I can use over and over again. |
 | A demo clinic booking bot | [Clinic booking bot ](https://github.com/SUKIHEALTH/clinic-booking-bot)                     | A bot that allows you to text and use audio to book an appointment at a clinic during specific time frames and responds in the native language for confirmation. |
 
-https://github.com/SUKIHEALTH/clinic-booking-bot/
-
 ### 🚀 Why It Matters
 Each tool is built with one goal in mind: **to protect doctors and improve patient care.**  
 
