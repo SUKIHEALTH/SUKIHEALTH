@@ -21,6 +21,7 @@ I focus especially on immigrant doctors, women in medicine, and mental health in
 | Productivity        | [SOAP Plan Vault](https://github.com/SUKIHEALTH/#)                        | Bilingual (EN/NL) AI-enhanced TextExpander template set for daily GP work.                                    |
 | Practice Automation | [Chrome Extensions for GPs](https://github.com/SUKIHEALTH/gp-ai-toolkit)                     | Extensions to reduce admin and save time for healthcare teams.    
 | Efficient patient note taking | [GP snippet ](https://github.com/SUKIHEALTH/gp-snippet)                     | AI-integrated app to create, save and run snippets or shortcuts to make patient note writing efficient and consistent. |
+| Fun clear anatomy visuals | [GP anatomy visuals ](https://github.com/SUKIHEALTH/retro-pop-art-anatomy)                     | Instead of opening Google Images during consultations, this tool built custom visual library I can use over and over again. |
 
 ### 🚀 Why It Matters
 Each tool is built with one goal in mind: **to protect doctors and improve patient care.**  
