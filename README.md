@@ -22,6 +22,9 @@ I focus especially on immigrant doctors, women in medicine, and mental health in
 | Practice Automation | [Chrome Extensions for GPs](https://github.com/SUKIHEALTH/gp-ai-toolkit)                     | Extensions to reduce admin and save time for healthcare teams.    
 | Efficient patient note taking | [GP snippet ](https://github.com/SUKIHEALTH/gp-snippet)                     | AI-integrated app to create, save and run snippets or shortcuts to make patient note writing efficient and consistent. |
 | Fun clear anatomy visuals | [GP anatomy visuals ](https://github.com/SUKIHEALTH/retro-pop-art-anatomy)                     | Instead of opening Google Images during consultations, this tool built custom visual library I can use over and over again. |
+| A demo clinic booking bot | [Clinic booking bot ](https://github.com/SUKIHEALTH/clinic-booking-bot)                     | A bot that allows you to text and use audio to book an appointment at a clinic during specific time frames and responds in the native language for confirmation. |
+
+https://github.com/SUKIHEALTH/clinic-booking-bot/
 
 ### 🚀 Why It Matters
 Each tool is built with one goal in mind: **to protect doctors and improve patient care.**  
