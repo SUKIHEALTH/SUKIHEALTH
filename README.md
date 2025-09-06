@@ -24,6 +24,7 @@ I focus especially on immigrant doctors, women in medicine, and mental health in
 | Fun clear anatomy visuals | [GP anatomy visuals ](https://github.com/SUKIHEALTH/retro-pop-art-anatomy)                     | Instead of opening Google Images during consultations, this tool built custom visual library I can use over and over again. |
 | A demo clinic booking bot | [Clinic booking bot ](https://github.com/SUKIHEALTH/clinic-booking-bot)                     | A bot that allows you to text and use audio to book an appointment at a clinic during specific time frames and responds in the native language for confirmation. |
 | Clinical Reasoning Support | [AI Dx Helper](https://huggingface.co/spaces/sukihealth/aidifferentialdiagnosishelper) | A browser-based tool that uses GPT-4o to generate differential diagnoses with confidence scores and red flags. Built for doctors navigating fatigue, complexity, or second-language consultations. |
+|AI Differential Diagnosis tool | https://chromewebstore.google.com/detail/ai-differential-diagnosis/hohhahgdnhijndbmfgeklmmhnnjoflao?authuser=0&hl=en | A chrome-extension tool that helps doctors who are exhausted or practice in a second-language think with confidence when discharging patients from a busy clinic. |
 
 
 ### 🚀 Why It Matters
