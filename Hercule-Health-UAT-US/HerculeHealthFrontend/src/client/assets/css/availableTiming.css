@@ -1,0 +1,50 @@
+/* Basic styling for the slot items */
+.slot-item {
+    cursor: pointer;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .slot-selected {
+    background-color: #324f94 !important; /* Your desired background color */
+    border-color: #324f94 !important;     /* Your desired border color */
+    color: #ffffff !important;            /* Your desired text color */
+    transform: scale(1.05) !important;    /* Slight zoom effect */
+  }
+  
+  
+  /* Style for available slots */
+  .slot-available {
+    background-color: #28a745; /* Green background for available slots */
+    color: white;
+  }
+  
+  /* Slot taken (disabled state) */
+  .slot-taken {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+  }
+  
+  /* Slot space left text */
+  .slot-space {
+    color: #aeadad;
+    border-radius: 5px;
+  }
+  .slot-selected.active {
+    background-color: #218838; /* Darker green for active selection */
+  }
+  
+  .slot-available:hover {
+    background-color: #d6efff; /* Lighter hover effect for available slots */
+  }
+  
+  .slot-item:not(.slot-taken):not(.slot-selected):hover {
+    background-color: #e9f7fd ; /* Hover effect for available slots */
+    cursor: pointer;
+  }
+
+  

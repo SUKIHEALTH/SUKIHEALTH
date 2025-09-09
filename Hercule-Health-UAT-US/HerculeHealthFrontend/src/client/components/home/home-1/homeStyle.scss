@@ -1,0 +1,219 @@
+.stepsbg {
+    height: 440px;
+    width: 100%;
+    background-color: #1B3B88;
+    display: flex;
+    align-items: center;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 32px;
+    width: 100%;
+}
+
+.step-card {
+    flex: 1 1 0;
+    // background: #fff;
+    border-radius: 12px;
+    margin: 0 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    box-shadow: 0 2px 12px rgba(27,59,136,0.08);
+    padding: 32px 16px;
+    text-align: center;
+}
+.step-card__img {
+    width: 195px;
+    height: 189px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.step-card__number {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.step-card__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.doctor-review-section {
+  width: 100%;
+  height: 380px;
+  display: flex;
+  align-items: center;
+  background: #f8fafd;
+  margin-bottom: 32px;
+
+  .container {
+    height: 100%;
+  }
+}
+
+.doctor-review-row {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.doctor-review-img-col {
+  flex: 0 0 40%;
+  max-width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-review-img {
+  max-height: 320px;
+  max-width: 100%;
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+.doctor-review-content-col {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top: 100px;
+}
+
+.doctor-review-bubble {
+  background: #1B3B88;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 16px;
+  padding: 18px 28px;
+  margin-bottom: 24px;
+  max-width: 420px;
+  font-style: italic;
+  box-shadow: 0 2px 8px rgba(27,59,136,0.06);
+}
+
+.doctor-review-main-text {
+  font-size: 1.6rem;
+  color: #1B3B88;
+  font-weight: 600;
+  background: #fff;
+  padding: 22px 32px;
+  display: inline-block;
+  border: 1px dotted #1B3B88;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  max-width: 600px;
+}
+
+.doctor-full-img-section {
+  width: 100%;
+  height: 645px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafd;
+}
+
+.doctor-full-img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.doctor-full-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.doctor-full-img-bubble {
+  position: absolute;
+  top: 100px;
+  right: 30%;
+  background: #1B3B88;
+  color: #fff;
+  font-size: 1.25rem;
+  border-radius: 20px 20px 0 20px; // top-left, top-right, bottom-right, bottom-left
+  padding: 24px 32px;
+  max-width: 340px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(27,59,136,0.10);
+}
+
+@media (max-width: 991px) {
+    .stepsbg {
+        height: auto; // Remove fixed height on mobile
+        padding: 24px 0; // Optional: add some vertical padding for spacing
+    }
+
+    .steps {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .step-card {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .doctor-review-row {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .doctor-review-img-col,
+    .doctor-review-content-col {
+        max-width: 100%;
+        flex: 0 0 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  .doctor-review-section {
+    height: auto;
+    padding: 32px 0;
+  }
+  .doctor-review-main-text {
+    font-size: 1.1rem;
+    padding: 16px 12px;
+    margin: 0 auto;
+  }
+  .doctor-review-bubble {
+    margin: 0 auto 18px auto;
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+
+  .doctor-full-img-section {
+    height: 340px;
+  }
+  .doctor-full-img-bubble {
+    top: 20px;
+    right: 5%;
+    font-size: 1rem;
+    padding: 14px 12px;
+    max-width: 90vw;
+  }
+}
