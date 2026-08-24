@@ -1,5 +1,30 @@
-# Ignore node_modules
-/node_modules/
+# Uploaded files (may contain patient data)
+uploads/
 
-# Ignore environment variable files (e.g., .env)
+# Environment
 .env
+.env.local
+.env.production
+.env.*.local
+
+# Config (contains credentials)
+src/config/
+
+# Dependencies
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
