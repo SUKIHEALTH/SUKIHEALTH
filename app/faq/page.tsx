@@ -248,8 +248,9 @@ export default function FAQPage() {
                   </li>
                 </ul>
                 <br />
-                Exact location details and parking information will be provided when you book your appointment. Choose
-                the location most convenient for you or your workplace.
+                The exact clinic address and parking information are provided when your clinic visit is confirmed.
+                Choose the location most convenient for you or your workplace. Please note that our registered office
+                in Leidschendam is a correspondence address only and does not receive patients.
               </AccordionContent>
             </AccordionItem>
 

@@ -27,7 +27,9 @@ export default function TermsPage() {
           <a href="https://www.bigregister.nl" target="_blank" rel="noopener noreferrer">
             bigregister.nl
           </a>
-          . We provide care at our locations in {siteConfig.locations.join(", ")} and by video consultation.
+          . The registered address is used for correspondence only and is not a clinic site. Consultations take place
+          at clinic locations in {siteConfig.locations.join(", ")} and by video consultation; the exact clinic address
+          is provided to you when your appointment is confirmed.
         </p>
       </LegalSection>
 

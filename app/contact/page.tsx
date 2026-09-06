@@ -66,14 +66,15 @@ export default function ContactPage() {
                   <div className="flex gap-3">
                     <MapPin className="w-5 h-5 text-teal-600 shrink-0 mt-0.5" aria-hidden="true" />
                     <div>
-                      <p className="font-semibold text-sm">Locations</p>
+                      <p className="font-semibold text-sm">Clinic locations</p>
                       <ul className="text-sm text-muted-foreground">
                         {siteConfig.locations.map((location) => (
                           <li key={location}>{location}</li>
                         ))}
                       </ul>
                       <p className="text-xs text-muted-foreground mt-2">
-                        Exact addresses are provided with your booking confirmation.
+                        Exact clinic addresses are provided when your visit is confirmed. Our registered office in
+                        Leidschendam is for correspondence only.
                       </p>
                     </div>
                   </div>

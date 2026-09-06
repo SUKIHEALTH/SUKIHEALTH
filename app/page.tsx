@@ -47,7 +47,7 @@ const reasons = [
   {
     icon: Globe2,
     title: "Three locations",
-    text: "Rotterdam, Eindhoven and The Hague, plus video consultations. Choose the clinic closest to home or work.",
+    text: "Rotterdam, Eindhoven and The Hague, plus video consultations. The clinic address is shared when your visit is confirmed.",
   },
   {
     icon: FileCheck,

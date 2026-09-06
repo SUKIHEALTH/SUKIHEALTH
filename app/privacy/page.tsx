@@ -22,7 +22,8 @@ export default function PrivacyPage() {
       <LegalSection id="controller" title="1. Who is responsible for your data">
         <p>
           The data controller is {legal.legalEntityName}, registered with the Dutch Chamber of Commerce (KvK) under
-          number {legal.kvkNumber}, with its registered address at {legal.registeredAddress}.
+          number {legal.kvkNumber}, with its registered (correspondence) address at {legal.registeredAddress}. This
+          address is not a clinic site.
         </p>
         <p>
           For any question about this policy or to exercise your rights, contact our data protection contact at{" "}

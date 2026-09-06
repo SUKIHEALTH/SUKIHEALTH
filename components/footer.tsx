@@ -95,8 +95,11 @@ export function Footer() {
                 <dd>{legal.legalEntityName}</dd>
               </div>
               <div>
-                <dt className="sr-only">Registered address</dt>
-                <dd>{legal.registeredAddress}</dd>
+                <dt className="sr-only">Correspondence address</dt>
+                <dd>
+                  {legal.registeredAddress}
+                  <span className="block text-xs">(registered office and correspondence only; not a clinic site)</span>
+                </dd>
               </div>
               <div className="flex gap-1">
                 <dt>KvK:</dt>
@@ -119,8 +122,11 @@ export function Footer() {
                 </dd>
               </div>
               <div>
-                <dt className="sr-only">Locations</dt>
-                <dd>{siteConfig.locations.join(" | ")}, The Netherlands</dd>
+                <dt className="sr-only">Clinic locations</dt>
+                <dd>
+                  Clinic visits: {siteConfig.locations.join(" | ")}, The Netherlands
+                  <span className="block text-xs">Clinic addresses are shared with your booking confirmation.</span>
+                </dd>
               </div>
             </dl>
           </address>
