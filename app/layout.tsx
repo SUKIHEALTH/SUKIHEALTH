@@ -1,24 +1,44 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Geist, Geist_Mono, Inter } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import Script from "next/script"
+import type { Metadata, Viewport } from "next"
+import { Inter } from "next/font/google"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Toaster } from "@/components/ui/toaster"
+import { ConsentProvider } from "@/components/consent/consent-provider"
+import { CookieBanner } from "@/components/consent/cookie-banner"
+import { ConsentGatedScripts } from "@/components/consent/consent-gated-scripts"
+import { siteConfig } from "@/lib/site-config"
 import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "Expat Health Clinic - Private Healthcare for Expats in the Netherlands",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: "Expat Health Clinic - Private Healthcare for Expats in the Netherlands",
+    template: "%s | Expat Health Clinic",
+  },
   description:
     "Long appointments, clear explanations, and support navigating the Dutch healthcare system. Additional private care for internationals and expats in the Netherlands.",
   keywords:
     "expat healthcare, private doctor Netherlands, English speaking doctor, Rotterdam, expat GP, international health, medical translation",
-    generator: 'v0.app'
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "en_NL",
+    siteName: siteConfig.name,
+    title: "Expat Health Clinic - Private Healthcare for Expats in the Netherlands",
+    description:
+      "Long appointments, clear explanations, and support navigating the Dutch healthcare system for internationals in the Netherlands.",
+  },
+  robots: { index: true, follow: true },
+  generator: "v0.app",
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0d9488",
+  width: "device-width",
+  initialScale: 1,
 }
 
 export default function RootLayout({
@@ -27,29 +47,22 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-3LN6Z5QFNS"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-3LN6Z5QFNS');
-          `}
-        </Script>
-      </head>
+    <html lang="en" className="bg-background">
       <body className={`${inter.variable} font-sans antialiased`}>
-        <Header />
-        {children}
-        <Footer />
-        <Toaster />
-        <Analytics />
-        <elevenlabs-convai agent-id="agent_01jwhksefdfpn9yd5h8r19jxc4"></elevenlabs-convai>
+        <ConsentProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[70] focus:rounded-md focus:bg-teal-600 focus:px-4 focus:py-2 focus:text-white"
+          >
+            Skip to main content
+          </a>
+          <Header />
+          <div id="main-content">{children}</div>
+          <Footer />
+          <Toaster />
+          <CookieBanner />
+          <ConsentGatedScripts />
+        </ConsentProvider>
       </body>
     </html>
   )

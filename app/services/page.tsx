@@ -4,11 +4,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Clock, FileSearch, Activity, Compass, Building2, Info } from "lucide-react"
 import Image from "next/image"
+import type { Metadata } from "next"
 
-export const metadata = {
-  title: "Services - Expat Health Clinic",
+export const metadata: Metadata = {
+  title: "Services",
   description:
-    "Comprehensive private healthcare services for expats in the Netherlands, including deep dive consultations, second opinions, health checks, and care navigation.",
+    "Private healthcare services for expats in the Netherlands, including deep dive consultations, second opinions, health checks, and care navigation.",
+  alternates: { canonical: "/services" },
 }
 
 export default function ServicesPage() {
@@ -29,6 +31,7 @@ export default function ServicesPage() {
                 src="/professional-private-medical-clinic-reception-offi.jpg"
                 alt="Expat Health Clinic professional office environment"
                 fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
                 className="object-cover"
                 priority
               />
@@ -41,10 +44,15 @@ export default function ServicesPage() {
       <section className="px-4 py-8">
         <div className="container mx-auto max-w-6xl">
           <Alert className="border-teal-200 bg-teal-50">
-            <Info className="h-5 w-5 text-teal-600" />
+            <Info className="h-5 w-5 text-teal-600" aria-hidden="true" />
             <AlertDescription className="text-gray-700 leading-relaxed">
-              All services are self-pay. We do not work with Dutch health insurers. You will receive an invoice you may
-              submit to your own (international) insurance.
+              All services are self-pay. We do not have contracts with Dutch health insurers. Current fees are shown on
+              our booking platform before you confirm. You will receive an itemised invoice you may submit to your own
+              (international) insurer; reimbursement depends on your policy. See our{" "}
+              <Link href="/terms" className="text-teal-700 underline underline-offset-4">
+                Terms & Conditions
+              </Link>{" "}
+              for cancellation and payment terms.
             </AlertDescription>
           </Alert>
         </div>
@@ -62,6 +70,7 @@ export default function ServicesPage() {
                     src="/medical-professional-in-modern-private-clinic-offi.jpg"
                     alt="Comprehensive consultation in private clinic office"
                     fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -132,6 +141,7 @@ export default function ServicesPage() {
                     src="/medical-documents-review-in-bright-modern-clinic-o.jpg"
                     alt="Medical document review in clinic office"
                     fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -199,6 +209,7 @@ export default function ServicesPage() {
                     src="/health-screening-in-modern-private-clinic-office-c.jpg"
                     alt="Health assessment in private clinic office"
                     fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -264,6 +275,7 @@ export default function ServicesPage() {
                     src="/healthcare-consultation-modern-clinic-office-profe.jpg"
                     alt="Healthcare navigation consultation in clinic office"
                     fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -326,6 +338,7 @@ export default function ServicesPage() {
                     src="/corporate-wellness-modern-professional-medical-off.jpg"
                     alt="Corporate health services in professional clinic"
                     fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
                     className="object-cover"
                   />
                 </div>
@@ -336,8 +349,8 @@ export default function ServicesPage() {
                         <Building2 className="w-7 h-7 text-teal-600" />
                       </div>
                       <div className="flex-1">
-                        <CardTitle className="text-2xl md:text-3xl mb-2">Corporate Expat Health Packages</CardTitle>
-                        <p className="text-teal-600 font-semibold">For employers and HR teams</p>
+                        <CardTitle className="text-2xl md:text-3xl mb-2">Corporate & TPA Health Packages</CardTitle>
+                        <p className="text-teal-600 font-semibold">For employers, insurers and HR teams</p>
                       </div>
                     </div>
                   </CardHeader>
@@ -367,7 +380,7 @@ export default function ServicesPage() {
 
                     <div className="pt-4">
                       <Button asChild className="bg-teal-500 hover:bg-teal-600" size="lg">
-                        <Link href="/contact">Contact for Corporate Packages</Link>
+                        <Link href="/corporate-partners">Learn about corporate packages</Link>
                       </Button>
                     </div>
                   </CardContent>

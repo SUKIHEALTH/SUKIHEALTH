@@ -2,11 +2,14 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Star, Languages, MapPin } from "lucide-react"
+import { ShieldCheck, Languages, MapPin } from "lucide-react"
+import type { Metadata } from "next"
+import { siteConfig } from "@/lib/site-config"
 
-export const metadata = {
-  title: "FAQ - Expat Health Clinic",
+export const metadata: Metadata = {
+  title: "FAQ",
   description: "Frequently asked questions about private healthcare for expats in the Netherlands",
+  alternates: { canonical: "/faq" },
 }
 
 export default function FAQPage() {
@@ -16,21 +19,22 @@ export default function FAQPage() {
       <section className="bg-gradient-to-b from-teal-50 to-white py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="flex flex-wrap gap-3 mb-6 justify-center">
-            <Badge variant="secondary" className="bg-teal-100 text-teal-700 px-4 py-2 text-sm font-semibold">
-              <Star className="w-4 h-4 mr-1" />
-              Trusted by 2,000+ expats
+            <Badge variant="secondary" className="bg-teal-100 text-teal-800 px-4 py-2 text-sm font-semibold">
+              <ShieldCheck className="w-4 h-4 mr-1" aria-hidden="true" />
+              BIG-registered doctors
             </Badge>
-            <Badge variant="secondary" className="bg-blue-100 text-blue-700 px-4 py-2 text-sm font-semibold">
-              <Languages className="w-4 h-4 mr-1" />
-              10+ Languages Spoken
+            <Badge variant="secondary" className="bg-teal-100 text-teal-800 px-4 py-2 text-sm font-semibold">
+              <Languages className="w-4 h-4 mr-1" aria-hidden="true" />
+              Multilingual team
             </Badge>
-            <Badge variant="secondary" className="bg-purple-100 text-purple-700 px-4 py-2 text-sm font-semibold">
-              <MapPin className="w-4 h-4 mr-1" />3 Locations in NL
+            <Badge variant="secondary" className="bg-teal-100 text-teal-800 px-4 py-2 text-sm font-semibold">
+              <MapPin className="w-4 h-4 mr-1" aria-hidden="true" />
+              Rotterdam, Eindhoven, The Hague
             </Badge>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-balance">Frequently Asked Questions</h1>
           <p className="text-xl text-gray-600 text-pretty">
-            Everything you need to know about premium expat healthcare in the Netherlands
+            Everything you need to know about private expat healthcare in the Netherlands
           </p>
         </div>
       </section>
@@ -75,8 +79,8 @@ export default function FAQPage() {
                   <li>Long-term maintenance prescriptions</li>
                 </ul>
                 <br />
-                Expat Health Clinic provides premium additional care but cannot provide 24/7 emergency care or replace
-                the full scope of services that a regular GP provides.
+                Expat Health Clinic provides additional care but does not provide emergency or out-of-hours care and
+                cannot replace the full scope of services that a regular GP provides.
               </AccordionContent>
             </AccordionItem>
 
@@ -95,8 +99,8 @@ export default function FAQPage() {
                 <br />
                 <br />
                 Many international health insurance plans offer more flexibility for private consultations than standard
-                Dutch insurance. Over 75% of our clients successfully receive partial or full reimbursement from their
-                international insurers.
+                Dutch basic insurance. Check your policy conditions or ask your insurer before booking if reimbursement
+                matters to you.
               </AccordionContent>
             </AccordionItem>
 
@@ -105,13 +109,13 @@ export default function FAQPage() {
                 What if I don't have a GP yet?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                We can help you understand how to find and register with a Dutch GP (huisarts), and many of our 2,000+
-                clients have used our navigation service for this exact purpose.
+                We can help you understand how to find and register with a Dutch GP (huisarts); our Care Navigation
+                service is often used for exactly this purpose.
                 <br />
                 <br />
                 While you're looking for a GP, we can provide consultations, but you should be aware that:
                 <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
-                  <li>We cannot offer 24/7 emergency care</li>
+                  <li>We cannot offer emergency or out-of-hours care</li>
                   <li>We cannot provide long-term chronic care management</li>
                   <li>You may face gaps in care coverage</li>
                 </ul>
@@ -152,8 +156,9 @@ export default function FAQPage() {
                 health. We believe in collaborative care and supporting—not replacing—your existing healthcare team.
                 <br />
                 <br />
-                All information sharing is done with your explicit permission and in accordance with Dutch privacy laws
-                (AVG/GDPR). Your health data security is our top priority.
+                All information sharing is done with your explicit permission and in accordance with the GDPR (AVG) and
+                the WGBO. See our <Link href="/privacy" className="text-teal-700 underline underline-offset-4">Privacy
+                Policy</Link> for details on how we handle medical data.
               </AccordionContent>
             </AccordionItem>
 
@@ -162,7 +167,8 @@ export default function FAQPage() {
                 What languages do you speak?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                We speak <strong>10+ languages fluently</strong>, including:
+                Consultations are held in <strong>English or Dutch</strong>. Depending on the physician, the following
+                languages are also available:
                 <br />
                 <br />
                 <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
@@ -198,8 +204,8 @@ export default function FAQPage() {
                   </li>
                 </ul>
                 <br />
-                If you need consultation in another language, please let us know when booking and we'll do our best to
-                accommodate you. Being understood in your native language makes all the difference in healthcare.
+                Please state your preferred language when booking so we can match you with the right physician. If you
+                need another language, let us know and we will tell you honestly whether we can accommodate it.
               </AccordionContent>
             </AccordionItem>
 
@@ -208,12 +214,8 @@ export default function FAQPage() {
                 How long does it take to get an appointment?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                <strong>Same-week appointments are usually available.</strong> We typically respond to booking requests
-                within 2 business days and can often schedule you within 3-7 days.
-                <br />
-                <br />
-                Unlike traditional GP practices with 2-3 week waiting times, we maintain availability specifically for
-                expats who need prompt, quality care.
+                Live availability is shown on our online booking platform, so you can see the next open slot before you
+                book. We typically respond to email booking requests within 2 business days.
                 <br />
                 <br />
                 For urgent (but non-emergency) concerns, please mention this in your booking request and we'll do our
@@ -231,7 +233,7 @@ export default function FAQPage() {
                 Where are you located?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                We have <strong>3 convenient locations</strong> across the Netherlands:
+                We see patients at <strong>three locations</strong> in the Netherlands and by video consultation:
                 <br />
                 <br />
                 <ul className="list-disc list-inside mt-2 space-y-2 ml-4">
@@ -256,16 +258,15 @@ export default function FAQPage() {
                 Can I bring my family members?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Yes! Over 60% of our clients are families who appreciate having their entire family seen by doctors who
-                understand expat life.
+                Yes. We regularly see families and are used to caring for children and adults who are new to the Dutch
+                system.
                 <br />
                 <br />
-                Each person will need their own appointment, but we can schedule them consecutively on the same day if
-                preferred. Many families find this more convenient than managing multiple GP visits.
+                Each person needs their own appointment, but we can schedule them consecutively on the same day if
+                preferred. For children under 16, a parent or guardian must be present and give consent.
                 <br />
                 <br />
-                We also offer special family packages through our corporate services with preferential rates. Contact us
-                for more information about family care plans.
+                Family arrangements are also available through our corporate services. Contact us for details.
               </AccordionContent>
             </AccordionItem>
 
@@ -274,18 +275,22 @@ export default function FAQPage() {
                 Are your doctors qualified and registered?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                <strong>Absolutely.</strong> All our physicians are:
+                <strong>Yes.</strong> Our physicians are:
                 <br />
                 <br />
                 <ul className="list-disc list-inside mt-2 space-y-1 ml-4">
-                  <li>Fully licensed and registered with the Dutch BIG register</li>
+                  <li>Licensed and registered in the Dutch BIG register (numbers listed in the footer and available on request)</li>
                   <li>Trained in Dutch and/or international medical systems</li>
-                  <li>Experienced in working with expat populations</li>
+                  <li>Experienced in working with international patients</li>
                   <li>Committed to evidence-based medicine and continuing education</li>
                 </ul>
                 <br />
-                We maintain the highest professional standards and work with premium healthcare partners including
-                Huisartspraktijk M.S. Fonderson, Rotterdam International Center, and leading Dutch medical laboratories.
+                You can verify any BIG registration yourself at{" "}
+                <a href="https://www.bigregister.nl" target="_blank" rel="noopener noreferrer" className="text-teal-700 underline underline-offset-4">
+                  bigregister.nl
+                </a>
+                . We work with partners including Huisartspraktijk M.S. Fonderson, Rotterdam International Center and
+                Dutch medical laboratories.
               </AccordionContent>
             </AccordionItem>
 
@@ -294,32 +299,29 @@ export default function FAQPage() {
                 Why should I pay for private care when I have Dutch insurance?
               </AccordionTrigger>
               <AccordionContent className="text-muted-foreground leading-relaxed">
-                Great question. Here's what 2,000+ expats have told us makes it worthwhile:
+                Our patients tell us these are the reasons it is worthwhile for them:
                 <br />
                 <br />
                 <ul className="list-disc list-inside mt-2 space-y-2 ml-4">
                   <li>
-                    <strong>Time:</strong> 60-90 minute appointments vs. rushed 10-minute consultations
+                    <strong>Time:</strong> 60-90 minute appointments with room for every question
                   </li>
                   <li>
-                    <strong>Language:</strong> Fluent English (and 9+ other languages) vs. basic medical Dutch
+                    <strong>Language:</strong> Consultations in English or Dutch, with other languages available
                   </li>
                   <li>
-                    <strong>Understanding:</strong> Doctors who get expat life vs. cultural miscommunication
+                    <strong>Understanding:</strong> Doctors who are familiar with the realities of expat life
                   </li>
                   <li>
-                    <strong>Speed:</strong> Same-week appointments vs. 2-3 week waiting times
+                    <strong>Clarity:</strong> A detailed written summary you can share with your GP or family
                   </li>
                   <li>
-                    <strong>Clarity:</strong> Detailed written summaries vs. brief, unclear notes
-                  </li>
-                  <li>
-                    <strong>Navigation:</strong> System guidance vs. figuring it out alone
+                    <strong>Navigation:</strong> Guidance through referrals, waiting lists and insurance questions
                   </li>
                 </ul>
                 <br />
-                Think of it as premium healthcare that works the way you're used to—and many international insurers
-                reimburse part or all of the cost.
+                Private care complements, rather than replaces, the care covered by your Dutch insurance. Some
+                international insurers reimburse part of the cost; check your own policy.
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -329,17 +331,17 @@ export default function FAQPage() {
               Still have questions? Our team speaks your language and is ready to help.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg" className="bg-teal-500 hover:bg-teal-600">
-                <a href="https://expatclinic.trafft.com/" target="_blank" rel="noopener noreferrer">
-                  Book Your Appointment
+              <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700 text-white">
+                <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer">
+                  Book your appointment
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/contact">Contact Us</Link>
+                <Link href="/contact">Contact us</Link>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground pt-4">
-              Join 2,000+ satisfied expats • Same-week availability • 10+ languages
+              Rotterdam • Eindhoven • The Hague • Video consultations
             </p>
           </div>
         </div>
