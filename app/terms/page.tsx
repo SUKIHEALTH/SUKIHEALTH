@@ -22,9 +22,12 @@ export default function TermsPage() {
       <LegalSection id="provider" title="1. About us">
         <p>
           Services are provided by {legal.legalEntityName}, KvK {legal.kvkNumber}, AGB code {legal.agbCode}, with its
-          registered address at {legal.registeredAddress}. Our physicians are registered in the Dutch BIG register
-          ({legal.bigRegistration}). We provide care at our locations in {siteConfig.locations.join(", ")} and by video
-          consultation.
+          registered address at {legal.registeredAddress}. Our physician is registered in the Dutch BIG register under
+          number {legal.bigRegistration}, which you can verify at{" "}
+          <a href="https://www.bigregister.nl" target="_blank" rel="noopener noreferrer">
+            bigregister.nl
+          </a>
+          . We provide care at our locations in {siteConfig.locations.join(", ")} and by video consultation.
         </p>
       </LegalSection>
 
@@ -149,9 +152,13 @@ export default function TermsPage() {
           respond within two weeks and to resolve complaints within six weeks.
         </p>
         <p>
-          In accordance with the Wkkgz, you may also contact our independent complaints officer and, if the complaint is
-          not resolved, submit it to the recognised disputes body we are affiliated with: {legal.complaintsBody}. This
-          procedure is free of charge for patients.
+          In accordance with the Wkkgz, we are affiliated with an independent, recognised complaints and disputes
+          scheme:{" "}
+          <a href={legal.complaintsUrl} target="_blank" rel="noopener noreferrer">
+            {legal.complaintsBody}
+          </a>
+          . Through this scheme you can contact an independent complaints officer and, if the complaint is not
+          resolved, submit it to the disputes body. This procedure is free of charge for patients.
         </p>
         <p>
           You may additionally report concerns to the Dutch Health and Youth Care Inspectorate (IGJ) via the{" "}

@@ -103,10 +103,6 @@ export function Footer() {
                 <dd>{legal.kvkNumber}</dd>
               </div>
               <div className="flex gap-1">
-                <dt>BTW:</dt>
-                <dd>{legal.btwNumber}</dd>
-              </div>
-              <div className="flex gap-1">
                 <dt>AGB:</dt>
                 <dd>{legal.agbCode}</dd>
               </div>
