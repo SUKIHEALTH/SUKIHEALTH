@@ -2,7 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Clock, FileSearch, Activity, Compass, Building2, Info } from "lucide-react"
+import { Clock, FileSearch, Activity, Compass, Building2, Info, Video } from "lucide-react"
 import Image from "next/image"
 import type { Metadata } from "next"
 
@@ -320,6 +320,89 @@ export default function ServicesPage() {
                       <Button asChild className="bg-teal-500 hover:bg-teal-600" size="lg">
                         <a href="https://expatclinic.trafft.com/" target="_blank" rel="noopener noreferrer">
                           Book This Service
+                        </a>
+                      </Button>
+                    </div>
+                  </CardContent>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          {/* Telemedicine */}
+          <div id="telemedicine" className="scroll-mt-20">
+            <Card className="border-none shadow-xl overflow-hidden ring-2 ring-teal-500">
+              <div className="grid lg:grid-cols-5 gap-0">
+                <div className="lg:col-span-2 relative h-64 lg:h-auto">
+                  <Image
+                    src="/video-consultation-doctor-laptop-home.png"
+                    alt="Patient at home having a video consultation with a doctor on a laptop"
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="lg:col-span-3">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start gap-4">
+                      <div className="w-14 h-14 rounded-full bg-teal-700 flex items-center justify-center flex-shrink-0">
+                        <Video className="w-7 h-7 text-white" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1">
+                        <CardTitle className="text-2xl md:text-3xl mb-2">Video Consultation (Telemedicine)</CardTitle>
+                        <p className="text-teal-600 font-semibold">From anywhere in the Netherlands</p>
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <p className="text-gray-700 leading-relaxed">
+                      Every service above except the physical health check can also be delivered by secure video call.
+                      You get the same BIG-registered doctor, the same unhurried format and the same written summary,
+                      without the travel.
+                    </p>
+
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-3">How it works:</h3>
+                      <ul className="space-y-2 text-gray-700">
+                        <li className="flex gap-2">
+                          <span className="text-teal-500 mt-1" aria-hidden="true">
+                            •
+                          </span>
+                          <span>Select the video option when booking; you receive a private, encrypted video link</span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-teal-500 mt-1" aria-hidden="true">
+                            •
+                          </span>
+                          <span>Join from a laptop, tablet or phone with a camera; no app installation required</span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-teal-500 mt-1" aria-hidden="true">
+                            •
+                          </span>
+                          <span>Share documents or Dutch medical letters in advance so the doctor can prepare</span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-teal-500 mt-1" aria-hidden="true">
+                            •
+                          </span>
+                          <span>
+                            If a physical examination is needed, the doctor will advise an in-person visit or a referral
+                            to your GP
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <p className="text-sm text-gray-600">
+                      You must be physically in the Netherlands during the consultation. Video consultations are not
+                      suitable for emergencies; in an emergency call 112.
+                    </p>
+
+                    <div className="pt-4">
+                      <Button asChild className="bg-teal-500 hover:bg-teal-600" size="lg">
+                        <a href="https://expatclinic.trafft.com/" target="_blank" rel="noopener noreferrer">
+                          Book a Video Consultation
                         </a>
                       </Button>
                     </div>

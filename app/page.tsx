@@ -4,7 +4,21 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Clock, FileCheck, AlertCircle, Globe2, Languages, Award, ShieldCheck, Star, CalendarCheck } from "lucide-react"
+import {
+  Clock,
+  FileCheck,
+  AlertCircle,
+  Globe2,
+  Languages,
+  Award,
+  ShieldCheck,
+  Star,
+  CalendarCheck,
+  Video,
+  Wifi,
+  Lock,
+  MapPinOff,
+} from "lucide-react"
 import { AiAssistantSection } from "@/components/home/ai-assistant-section"
 import { siteConfig } from "@/lib/site-config"
 
@@ -56,7 +70,30 @@ const reasons = [
   },
 ]
 
+const telemedicineBenefits = [
+  {
+    icon: MapPinOff,
+    title: "Anywhere in the Netherlands",
+    text: "No travel needed. Join from home, work or while relocating, as long as you are in the Netherlands during the call.",
+  },
+  {
+    icon: Lock,
+    title: "Secure video link",
+    text: "Consultations run over an encrypted video connection. You receive a private link with your booking confirmation.",
+  },
+  {
+    icon: Wifi,
+    title: "Same doctor, same time",
+    text: "The same BIG-registered physicians and the same unhurried format as an in-person visit, with a written summary afterwards.",
+  },
+]
+
 const services = [
+  {
+    title: "Video Consultation (Telemedicine)",
+    subtitle: "From anywhere in the Netherlands",
+    text: "A full consultation with a BIG-registered doctor over a secure video link. Ideal for second opinions, follow-ups, medical translation and system navigation.",
+  },
   {
     title: "Expat Deep Dive Consult",
     subtitle: "Comprehensive consultation",
@@ -82,7 +119,7 @@ const services = [
 const steps = [
   {
     title: "Book online",
-    text: "Choose a time and location (Rotterdam, Eindhoven or The Hague) or a video consultation. Availability is shown live on our booking platform.",
+    text: "Choose a clinic visit (Rotterdam, Eindhoven or The Hague) or a secure video consultation from anywhere in the Netherlands. Availability is shown live on our booking platform.",
   },
   {
     title: "60 to 90 minute consultation",
@@ -145,6 +182,10 @@ export default function HomePage() {
               <Languages className="w-4 h-4 mr-1" aria-hidden="true" />
               Multilingual team
             </Badge>
+            <Badge variant="secondary" className="bg-teal-700 text-white px-4 py-2 text-sm font-semibold">
+              <Video className="w-4 h-4 mr-1" aria-hidden="true" />
+              Video consultations available
+            </Badge>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -154,7 +195,7 @@ export default function HomePage() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-600 text-pretty leading-relaxed">
                 Private healthcare for internationals in the Netherlands, alongside your regular GP. Long appointments,
-                clear explanations, and help navigating the Dutch system.
+                clear explanations, and help navigating the Dutch system. In our clinics or by secure video call.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700 text-white text-lg px-8 py-6 shadow-lg">
@@ -202,6 +243,61 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section id="telemedicine" className="py-20 px-4 bg-teal-50 scroll-mt-20" aria-labelledby="telemedicine-heading">
+        <div className="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col gap-6">
+            <Badge className="w-fit bg-teal-700 text-white hover:bg-teal-700 px-3 py-1">
+              <Video className="w-4 h-4 mr-1" aria-hidden="true" />
+              Telemedicine
+            </Badge>
+            <h2 id="telemedicine-heading" className="text-3xl md:text-4xl font-bold text-gray-900 text-balance">
+              See a doctor by video, from anywhere in the Netherlands
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed text-pretty">
+              Many of our consultations do not need a physical examination. Second opinions, medical translation,
+              follow-ups and healthcare navigation work just as well over a secure video call, so you can skip the
+              travel and speak to a doctor from home or work.
+            </p>
+            <ul className="flex flex-col gap-5">
+              {telemedicineBenefits.map(({ icon: Icon, title, text }) => (
+                <li key={title} className="flex gap-4">
+                  <div className="w-11 h-11 shrink-0 rounded-full bg-white border border-teal-200 flex items-center justify-center">
+                    <Icon className="w-5 h-5 text-teal-700" aria-hidden="true" />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <h3 className="font-semibold text-gray-900">{title}</h3>
+                    <p className="text-gray-700 leading-relaxed text-sm">{text}</p>
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button asChild size="lg" className="bg-teal-600 hover:bg-teal-700 text-white">
+                <a href={siteConfig.bookingUrl} target="_blank" rel="noopener noreferrer">
+                  Book a video consultation
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="bg-white">
+                <Link href="/services#telemedicine">How video consultations work</Link>
+              </Button>
+            </div>
+            <p className="text-sm text-gray-600">
+              If the doctor judges that a physical examination is needed, we will advise an in-person visit or a
+              referral to your GP. Video consultations are not for emergencies.
+            </p>
+          </div>
+          <div className="relative h-[380px] lg:h-[520px] rounded-2xl overflow-hidden shadow-2xl">
+            <Image
+              src="/video-consultation-doctor-laptop-home.png"
+              alt="Patient at home having a video consultation with a doctor on a laptop"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -260,7 +356,7 @@ export default function HomePage() {
                 </CardContent>
               </Card>
             ))}
-            <Card className="md:col-span-2 border-none shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
               <CardHeader>
                 <CardTitle className="text-xl">Corporate & TPA Health Packages</CardTitle>
                 <CardDescription className="text-base">For employers, insurers and HR teams</CardDescription>
